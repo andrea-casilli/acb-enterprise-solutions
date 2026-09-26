@@ -102,6 +102,7 @@ npm ci
 npm run db:generate
 npx prisma validate
 npm run build
+```
 
 - `npm run dev` avvia API e frontend in modalità sviluppo.
 - `npm run build` compila entrambi i workspace.
