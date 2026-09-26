@@ -1,0 +1,4 @@
+const API=import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+export const auth={ token:localStorage.getItem('nexus-token')||'', user:JSON.parse(localStorage.getItem('nexus-user')||'null') };
+export async function request(path:string,options:RequestInit={}) { const r=await fetch(`${API}${path}`,{...options,headers:{'Content-Type':'application/json',...(auth.token?{Authorization:`Bearer ${auth.token}`} : {}),...options.headers}}); const data=await r.json(); if(!r.ok) throw new Error(typeof data.error==='string'?data.error:'Operazione non riuscita'); return data; }
+export async function login(email:string,password:string){const data=await request('/auth/login',{method:'POST',body:JSON.stringify({email,password})});auth.token=data.token;auth.user=data.user;localStorage.setItem('nexus-token',data.token);localStorage.setItem('nexus-user',JSON.stringify(data.user));return data;}
