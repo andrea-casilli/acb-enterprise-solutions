@@ -1,0 +1,14 @@
+{
+  "name": "nexus-enterprise-solutions",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w @nexus/api\" \"npm run dev -w @nexus/web\"",
+    "build": "npm run build -w @nexus/api && npm run build -w @nexus/web",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "node prisma/seed.mjs"
+  },
+  "devDependencies": { "concurrently": "^9.1.2", "prisma": "^6.4.1", "tsx": "^4.19.3", "typescript": "^5.7.3" }
+}
