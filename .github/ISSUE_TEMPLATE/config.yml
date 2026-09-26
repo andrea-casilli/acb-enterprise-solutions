@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Segnalazione di sicurezza
+    url: ../../security/policy
+    about: Non riportare vulnerabilità o dati sensibili nelle issue pubbliche.

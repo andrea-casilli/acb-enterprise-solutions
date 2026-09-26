@@ -1,0 +1,54 @@
+name: Segnalazione di bug
+description: Comunica un comportamento riproducibile e non relativo alla sicurezza.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per il contributo. Non inserire credenziali, token, dati personali o informazioni di sicurezza in questa issue.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Descrizione
+      description: Che cosa è accaduto e quale comportamento ti aspettavi?
+      placeholder: Descrizione chiara del problema e dell'impatto operativo.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passi per riprodurre
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidenze sanitizzate
+      description: Log, screenshot o messaggi d'errore senza dati riservati.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area interessata
+      options:
+        - Autenticazione
+        - Personale e presenze
+        - Turni
+        - Mansionario
+        - Accettazione merci
+        - Magazzino e anagrafiche
+        - API
+        - Altro
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      placeholder: Windows 11, Node 22, MySQL 8.4, Chrome ...
+    validations:
+      required: true

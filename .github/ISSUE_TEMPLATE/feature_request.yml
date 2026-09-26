@@ -1,0 +1,35 @@
+name: Proposta di funzionalità
+description: Proponi un miglioramento con un obiettivo operativo misurabile.
+title: "[Proposta]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Esigenza operativa
+      description: Quale problema o opportunità deve affrontare la funzionalità?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Soluzione proposta
+      description: Descrivi il comportamento atteso, gli utenti coinvolti e il risultato.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative considerate
+      description: Indica processi alternativi, workaround o integrazioni esistenti.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorità operativa
+      options:
+        - Bassa
+        - Normale
+        - Alta
+        - Urgente
+    validations:
+      required: true
