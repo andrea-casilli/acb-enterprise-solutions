@@ -10,5 +10,5 @@
     "db:migrate": "prisma migrate dev",
     "db:seed": "node prisma/seed.mjs"
   },
-  "devDependencies": { "concurrently": "^9.1.2", "prisma": "^6.4.1", "tsx": "^4.19.3", "typescript": "^5.7.3" }
+  "devDependencies": { "concurrently": "^9.1.2", "prisma": "^6.4.1", "tsx": "^4.19.3", "typescript": "^7.0.2" }
 }
