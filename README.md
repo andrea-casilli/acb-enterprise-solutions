@@ -102,7 +102,6 @@ npm ci
 npm run db:generate
 npx prisma validate
 npm run build
-```
 
 - `npm run dev` avvia API e frontend in modalità sviluppo.
 - `npm run build` compila entrambi i workspace.
@@ -132,4 +131,4 @@ Le vulnerabilità non devono essere aperte come issue pubbliche: segui [SECURITY
 
 ## Licenza
 
-Non è stata ancora selezionata una licenza per la distribuzione. Prima di accettare contributi esterni o riutilizzare il codice, il titolare del repository deve definire e pubblicare una licenza appropriata.
+Questo progetto è distribuito con [licenza MIT](LICENSE). Il testo completo è disponibile nel file `LICENSE` alla radice del repository.
